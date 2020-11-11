@@ -16,10 +16,11 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 	
-	ground = new Ground(600,50,120,10);
-
-
-	
+	ground = new Ground(1200,400,10000,10);
+    paper = new  Paper(15,350,25)
+    box = new Box(650,350,20,100)
+	box2 = new Box(500,350,20,100)
+	box3 = new Box(575,390,130,20)
   
 }
 
@@ -27,9 +28,14 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
-  ground.display()
-  paper.display()
-  //drawSprites();
+  ground.display();
+  paper.display();
+  box.display();
+  box2.display();
+  box3.display();
+  keyPressed();
+  drawSprites();
+  
  
 }
 
